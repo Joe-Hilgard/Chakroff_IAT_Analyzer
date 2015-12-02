@@ -36,6 +36,9 @@ for (i in 1:nrow(iatdat)) {
 outDat = outDat %>%
   filter(stim != "EN")
 
+# Give blocks non-numeric labels
+outDat$block = paste("block", outDat$block, sep = "")
+
 # Here it would be good to add codes for:
   # Congruency of block
   # Stimulus content per trial
